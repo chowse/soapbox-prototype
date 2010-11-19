@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+	document.documentElement.className += ' js';
+</script>
+
+<head>
+	<title>Submit Feedback</title>
+	<link rel="stylesheet" href="reset.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+
+<article id="intro">
+	<header>
+		<h1>Submit Your Feedback</h1>
+		<h2>Help improve Firefox</h2>
+	</header>
+	
+	<section class="content"><form>
+		<ul>
+			<li><a href="#rate">Rate Your Experience</a></li>
+			<li><a href="#broken">Report a Broken Website</a></li>
+			<li><a href="#idea">Share an Idea</a></li>
+		</ul>
+	</form></section>
+
+	<aside>
+		<span>If you need help with or have a problem</span>
+		<span>with Firefox, please visit <a href="#">Firefox Support</a>.</span>
+	</aside>
+</article>
+
+
+<article id="rate">
+	<header>
+		<h1>Rate Your Experience</h1>
+		<nav>
+			<a href="#intro">Go Back</a>
+		</nav>
+	</header>
+	
+	<section class="content"><form>
+		<div class="intro">
+			How would you rate your experience with Firefox?
+		</div>
+
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th>Poor</th>
+					<th>Fair</th>
+					<th>Don't Care</th>
+					<th>Good</th>
+					<th>Excellent</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>Start-Up Time</td>
+					<td><input type="radio" name="r1" /></td>
+					<td><input type="radio" name="r1" /></td>
+					<td><input type="radio" name="r1" /></td>
+					<td><input type="radio" name="r1" /></td>
+					<td><input type="radio" name="r1" /></td>
+				</tr>
+
+				<tr>
+					<td>Page Load Time</td>
+					<td><input type="radio" name="r2" /></td>
+					<td><input type="radio" name="r2" /></td>
+					<td><input type="radio" name="r2" /></td>
+					<td><input type="radio" name="r2" /></td>
+					<td><input type="radio" name="r2" /></td>
+				</tr>
+
+				<tr>
+					<td>Responsiveness</td>
+					<td><input type="radio" name="r3" /></td>
+					<td><input type="radio" name="r3" /></td>
+					<td><input type="radio" name="r3" /></td>
+					<td><input type="radio" name="r3" /></td>
+					<td><input type="radio" name="r3" /></td>
+				</tr>
+
+				<tr>
+					<td>Crashiness</td>
+					<td><input type="radio" name="r4" /></td>
+					<td><input type="radio" name="r4" /></td>
+					<td><input type="radio" name="r4" /></td>
+					<td><input type="radio" name="r4" /></td>
+					<td><input type="radio" name="r4" /></td>
+				</tr>
+
+				<tr>
+					<td>Features</td>
+					<td><input type="radio" name="r5" /></td>
+					<td><input type="radio" name="r5" /></td>
+					<td><input type="radio" name="r5" /></td>
+					<td><input type="radio" name="r5" /></td>
+					<td><input type="radio" name="r5" /></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="submit">
+			<a href="#" data-waittext="Submitting Feedback">Submit Feedback</a>
+			<button type="submit">Submit Feedback</button>
+		</div>
+	</form></section>
+</article>
+
+
+<article id="broken">
+	<header>
+		<h1>Report a Broken Website</h1>
+		<nav>
+			<a href="#intro">Go Back</a>
+		</nav>
+	</header>
+	
+	<section class="content"><form>
+		<div class="intro">
+			<span>Does a website look or behave incorrectly in Firefox?</span>
+			<span>Provide us some details about the problem and we'll try to fix it.</span>
+		</div>
+		
+		<div class="fields">
+			<div>
+				<label>What is the URL of the broken site?</label>
+				<p><input type="url" value="http://www.brokensite.com/broken.php"/></p>
+			</div>
+		
+			<div>
+				<label>Describe the problem with the website.</label>
+				<p><textarea placeholder="Example: Images were not loading, but the rest of the page was."></textarea></p>
+				<p class="privacy"><span>To protect your privacy, please ensure that no personally identifiable information is included in your feedback.</span></p>
+			</div>
+		</div>
+
+		<div class="submit">
+			<a href="#" data-waittext="Submitting Feedback">Submit Feedback</a>
+			<button type="submit">Submit Feedback</button>
+		</div>
+	</form></section>
+</article>
+
+
+<article id="idea">
+	<header>
+		<h1>Share an Idea</h1>
+		<nav>
+			<a href="#intro">Go Back</a>
+		</nav>
+	</header>
+	
+	<section class="content"><form>
+		<div class="intro">
+			Have an idea how Firefox could be better? Let us know!
+		</div>
+		
+		<div class="fields">
+			<div>
+				<label>Describe your idea below.</label>
+				<p><textarea></textarea></p>
+				<p class="privacy"><span>To protect your privacy, please ensure that no personally identifiable information is included in your feedback.</span></p>
+			</div>
+		</div>
+
+		<div class="submit">
+			<a href="#" data-waittext="Submitting Feedback">Submit Feedback</a>
+			<button type="submit">Submit Feedback</button>
+		</div>
+	</form></section>
+</article>
+
+
+<article id="thanks">
+	<header>
+		<h1>Thanks for Your Feedback</h1>
+	</header>
+	
+	<div class="content"><form>
+		<div>
+			<span>Want to see where your feedback goes?</span>
+			<span>Visit the <a href="#">Firefox Feedback Dashboard.</a></span>
+		</div>
+
+		<div>
+			<span>Have more to say?</span>
+			<span>Feel free to <a href="#">submit more feedback.</a></span>
+		</div>
+
+		<div>
+			<span>Get the latest news about Firefox on...</span>
+			<ul>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Planet Mozilla</a></li>
+			</ul>
+		</div>
+	</form></div>
+</article>
+
+
+
+<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

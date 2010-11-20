@@ -9,16 +9,20 @@
 }
 
 
-
 html {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
+	background: #fff;
 }
+	body {
+		color: #282b31;
+	}
 
 article {
 	display: block;
 	left: 0;
 	right: 0;
+	min-height: 1200px;
 }
 	a {
 		color: #5084c8;
@@ -28,14 +32,12 @@ article {
 		text-decoration: underline;
 	}
 
-article { min-height: 600px; }
-
 
 article header {
 	position: relative;
 	width: 700px;
 	margin: 0 auto;
-	padding: 23px 0;
+	padding: 2em 0;
 }
 	article header h1,
 	article header h2 {
@@ -55,18 +57,31 @@ article header {
 	article header nav {
 		position: absolute;
 		right: 0;
-		top: 17px;
+		top: 1.5em;
 	}
 		article header nav a {
 			position: absolute;
-			background: #d8dee3;
+			background: url(back.png) no-repeat 0 0;
 			right: 0;
 			top: 0;
 			width: 34px;
 			height: 34px;
 			text-indent: -1000em;
 		}
-	
+			article header nav a strong {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: url(back.png) no-repeat -34px 0;
+				opacity: 0;
+				-moz-transition: opacity .25s;
+			}
+			article header nav a:hover strong {
+				opacity: 1;
+			}
+
 article .content {
 	width: 940px;
 	margin: 0 auto;
@@ -90,22 +105,23 @@ article .content {
 	article .content .fields {
 	}
 		article .content .fields > div {
-			margin-top: 35px;
+			margin-top: 2em;
 		}
 		article .content .fields label {
-			font-size: 16px;
+			display: block;
+			margin-bottom: .25em;
 			font-weight: bold;
-			color: #303030;
 		}
 	article .content .submit {
-		margin-top: 35px;
+		margin-top: 2em;
 	}
 		article .content .submit a {
 			position: relative;
 			background: -moz-linear-gradient(-90deg, #84C63C, #489615);
 			padding: 7px 14px;
 			/*padding-bottom: 10px;*/
-			border: 1px solid #808080;
+			border: 1px solid #3e8012;
+			border: 1px solid #489615;
 			font-size: 21px;
 			color: #fff;
 			border-radius: 6px;
@@ -121,7 +137,7 @@ article .content {
 			            0 1px 4px rgba(0,0,0, .2);
 		}
 		article .content .submit a:active {
-			top: 1px;
+			top: 2px;
 		}
 
 		html article .content .submit a { display: none;  }
@@ -132,16 +148,27 @@ article .content {
 
 
 input[type=text], input[type=url], textarea {
-	border: 1px solid #004265;
+	border: 1px solid #BFD0D8;
 	color: #606060;
+	color: #5e5f60;
 	font-family: inherit;
 	font-size: 21px;
 	padding: .25em .5em;
 	border-radius: .25em;
+	box-shadow: 0 1px 2px rgba(0,0,0, .125) inset;
+}
+
+textarea {
+	line-height: 1.2;
+}
+
+input[type=text], input[type=url], textarea {
+	background: #f9fcff;
+	box-shadow: 0 1px 2px rgba(0,0,0, .125) inset;
 }
 
 .privacy {
-	margin-top: .25em;
+	margin-top: .5em;
 	font-size: 12px;
 	color: #5c4b00;
 }
@@ -159,15 +186,55 @@ input[type=text], input[type=url], textarea {
 		padding: 35px 0;
 	}
 	#intro .content {
+		position: relative;
 		padding: 0;
-		min-height: 200px;
 		background: url(divider-top.png) no-repeat center top,
 		            url(divider-bottom.png) no-repeat center bottom;
 	}
+		#intro .content li {
+			display: inline;
+			font-family: MetaBlack, "Trebuchet MS", sans-serif;
+			text-transform: uppercase;
+			text-align: center;
+		}
+			#intro .content li a {
+				position: relative;
+				display: inline-block;
+				width: 33.3%;
+				padding: 2em 0;
+				color: #6D7581;
+				text-decoration: none;
+				-moz-transition: color .25s;
+			}
+			#intro .content li a:hover {
+				color: #5084C8;
+			}
+				#intro .content li a span {
+					position: relative;
+					display: block;
+					width: 96px;
+					height: 96px;
+					margin: 0 auto;
+					margin-bottom: 1em;
+					background: url(type.png) no-repeat 0 0;
+				}
+				#intro .content li a strong {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					background: url(type.png) no-repeat 0 -100px;
+					opacity: 0;
+					-moz-transition: opacity .25s;
+				}
+				#intro .content li a:hover strong {
+					opacity: 1;
+				}
 	#intro aside {
 		width: 700px;
 		margin: 0 auto;
-		margin-top: 35px;
+		margin-top: 2em;
 		font-family: Georgia, 'Times New Roman', Times, serif;
 		font-size: 21px;
 		font-style: italic;
@@ -186,7 +253,50 @@ input[type=text], input[type=url], textarea {
 #rate {
 	
 }
-	#rate input[type=radio] {
-		width: 30px;
-		height: 30px;
+	#rate table {
+		margin-top: 2em;
 	}
+		#rate colgroup.values col {
+			width: 80px;
+		}
+		#rate table thead th {
+			padding-bottom: .25em;
+			color: #6d7581;
+			font-size: 12px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		#rate table tbody {
+			font-size: 21px;
+		}
+		#rate table tbody :-moz-any(td, th) {
+			padding: .25em 0;
+			border-bottom: 1px dotted #e0e0e0;
+			vertical-align: middle;
+		}
+		#rate table tbody tr:first-child :-moz-any(td, th) {
+			border-top: 1px dotted #e0e0e0;
+		}
+		#rate table tbody td {
+			text-align: center;
+		}
+		#rate table tbody td span {
+			position: relative;
+			display: block;
+			width: 40px;
+			height: 40px;
+			margin: 0 auto;
+			background: rgba(255,0,0,.125);
+			overflow: hidden;
+		}
+		#rate table tbody td input {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border: 0 !important;
+			padding: 0 !important;
+			opacity: .25;
+			cursor: pointer;
+		}

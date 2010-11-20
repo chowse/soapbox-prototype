@@ -17,14 +17,16 @@
 <article id="intro">
 	<header>
 		<h1>Submit Your Feedback</h1>
-		<h2>Help improve Firefox</h2>
+		<h2>Help Improve Firefox</h2>
 	</header>
 	
 	<section class="content"><form>
 		<ul>
-			<li><a href="#rate">Rate Your Experience</a></li>
-			<li><a href="#broken">Report a Broken Website</a></li>
-			<li><a href="#idea">Share an Idea</a></li>
+			<!--
+			--><li><a href="#rate"><span><strong></strong></span> Rate Your Experience</a></li><!--
+			--><li><a href="#broken"><span><strong></strong></span> Report a Broken Website</span></a></li><!--
+			--><li><a href="#idea"><span><strong></strong></span> Share an Idea</span></a></li>	<!--
+			-->
 		</ul>
 	</form></section>
 
@@ -39,7 +41,7 @@
 	<header>
 		<h1>Rate Your Experience</h1>
 		<nav>
-			<a href="#intro">Go Back</a>
+			<a href="#intro" title="Go Back">Go Back <strong></strong></a>
 		</nav>
 	</header>
 	
@@ -49,6 +51,18 @@
 		</div>
 
 		<table>
+			<colgroup class="labels">
+				<col />
+			</colgroup>
+
+			<colgroup class="values">
+				<col />
+				<col />
+				<col />
+				<col />
+				<col />
+			</colgroup>
+			
 			<thead>
 				<tr>
 					<th></th>
@@ -62,48 +76,48 @@
 			
 			<tbody>
 				<tr>
-					<td>Start-Up Time</td>
-					<td><input type="radio" name="r1" /></td>
-					<td><input type="radio" name="r1" /></td>
-					<td><input type="radio" name="r1" /></td>
-					<td><input type="radio" name="r1" /></td>
-					<td><input type="radio" name="r1" /></td>
+					<th>Start-Up Time</th>
+					<td><span><input type="radio" name="r1" /></span></td>
+					<td><span><input type="radio" name="r1" /></span></td>
+					<td><span><input type="radio" name="r1" /></span></td>
+					<td><span><input type="radio" name="r1" /></span></td>
+					<td><span><input type="radio" name="r1" /></span></td>
 				</tr>
 
 				<tr>
-					<td>Page Load Time</td>
-					<td><input type="radio" name="r2" /></td>
-					<td><input type="radio" name="r2" /></td>
-					<td><input type="radio" name="r2" /></td>
-					<td><input type="radio" name="r2" /></td>
-					<td><input type="radio" name="r2" /></td>
+					<th>Page Load Time</th>
+					<td><span><input type="radio" name="r2" /></span></td>
+					<td><span><input type="radio" name="r2" /></span></td>
+					<td><span><input type="radio" name="r2" /></span></td>
+					<td><span><input type="radio" name="r2" /></span></td>
+					<td><span><input type="radio" name="r2" /></span></td>
 				</tr>
 
 				<tr>
-					<td>Responsiveness</td>
-					<td><input type="radio" name="r3" /></td>
-					<td><input type="radio" name="r3" /></td>
-					<td><input type="radio" name="r3" /></td>
-					<td><input type="radio" name="r3" /></td>
-					<td><input type="radio" name="r3" /></td>
+					<th>Responsiveness</th>
+					<td><span><input type="radio" name="r3" /></span></td>
+					<td><span><input type="radio" name="r3" /></span></td>
+					<td><span><input type="radio" name="r3" /></span></td>
+					<td><span><input type="radio" name="r3" /></span></td>
+					<td><span><input type="radio" name="r3" /></span></td>
 				</tr>
 
 				<tr>
-					<td>Crashiness</td>
-					<td><input type="radio" name="r4" /></td>
-					<td><input type="radio" name="r4" /></td>
-					<td><input type="radio" name="r4" /></td>
-					<td><input type="radio" name="r4" /></td>
-					<td><input type="radio" name="r4" /></td>
+					<th>Crashiness</th>
+					<td><span><input type="radio" name="r4" /></span></td>
+					<td><span><input type="radio" name="r4" /></span></td>
+					<td><span><input type="radio" name="r4" /></span></td>
+					<td><span><input type="radio" name="r4" /></span></td>
+					<td><span><input type="radio" name="r4" /></span></td>
 				</tr>
 
 				<tr>
-					<td>Features</td>
-					<td><input type="radio" name="r5" /></td>
-					<td><input type="radio" name="r5" /></td>
-					<td><input type="radio" name="r5" /></td>
-					<td><input type="radio" name="r5" /></td>
-					<td><input type="radio" name="r5" /></td>
+					<th>Features</th>
+					<td><span><input type="radio" name="r5" /></span></td>
+					<td><span><input type="radio" name="r5" /></span></td>
+					<td><span><input type="radio" name="r5" /></span></td>
+					<td><span><input type="radio" name="r5" /></span></td>
+					<td><span><input type="radio" name="r5" /></span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -120,7 +134,7 @@
 	<header>
 		<h1>Report a Broken Website</h1>
 		<nav>
-			<a href="#intro">Go Back</a>
+			<a href="#intro" title="Go Back">Go Back <strong></strong></a>
 		</nav>
 	</header>
 	
@@ -132,13 +146,13 @@
 		
 		<div class="fields">
 			<div>
-				<label>What is the URL of the broken site?</label>
-				<p><input type="url" value="http://www.brokensite.com/broken.php"/></p>
+				<label for="broken-url">What is the URL of the broken site?</label>
+				<p><input id="broken-url" name="url" type="url" size="45" value="http://www.brokensite.com/broken.php"/></p>
 			</div>
 		
 			<div>
-				<label>Describe the problem with the website.</label>
-				<p><textarea placeholder="Example: Images were not loading, but the rest of the page was."></textarea></p>
+				<label for="broken-desc">Describe the problem with the website.</label>
+				<p><textarea id="broken-desc" name="desc" cols="55" rows="3" placeholder="Example: Images were not loading, but the rest of the page was."></textarea></p>
 				<p class="privacy"><span>To protect your privacy, please ensure that no personally identifiable information is included in your feedback.</span></p>
 			</div>
 		</div>
@@ -155,7 +169,7 @@
 	<header>
 		<h1>Share an Idea</h1>
 		<nav>
-			<a href="#intro">Go Back</a>
+			<a href="#intro" title="Go Back">Go Back <strong></strong></a>
 		</nav>
 	</header>
 	
@@ -167,7 +181,7 @@
 		<div class="fields">
 			<div>
 				<label>Describe your idea below.</label>
-				<p><textarea></textarea></p>
+				<p><textarea id="idea-desc" name="desc" cols="55" rows="5"></textarea></p>
 				<p class="privacy"><span>To protect your privacy, please ensure that no personally identifiable information is included in your feedback.</span></p>
 			</div>
 		</div>

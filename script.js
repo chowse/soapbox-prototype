@@ -38,6 +38,18 @@
 			}, 100);
 			
 			return this;
+		},
+		submitButton: function(state) {
+			var textElem = this.find('span');
+			var oldHTML = textElem.html();
+			var newTextAttr = (state == 'waiting') ? 'data-waittext' : 'data-text';
+			
+			this.toggleClass('waiting', state == 'waiting');
+			textElem.html( this.attr(newTextAttr) );
+			
+			if (state == 'waiting') this.attr('data-text', oldHTML);
+			
+			return this;
 		}
 	});
 
@@ -50,21 +62,19 @@
 		return elem.length ? elem : $('#intro');
 	}
 	
-	function goToArticle(href, pushState)
+	function goToArticle(href, pushState, callback)
 	{
-		var article = getArticle(href);
+		var oldArticle = currentArticle;
+		var newArticle = getArticle(href);
 		
-		if (article.get(0) == currentArticle.get(0)) {
+		if (oldArticle.get(0) == newArticle.get(0)) {
 			return;
 		}
 
-		currentArticle.switchTo(article, function() {
-			currentArticle = article;
-			if (pushState) {
-				alert('pushing ' + '#' + article.attr('id'));
-				window.history.pushState('', '', '#' + article.attr('id'));
-			}
-		});
+		if (pushState) window.history.pushState('', '', '#' + newArticle.attr('id'));
+		currentArticle = newArticle;
+		
+		oldArticle.switchTo(newArticle, callback);
 	}
 	
 	$(function() {
@@ -74,6 +84,16 @@
 		window.onpopstate = function(e) {
 			goToArticle(document.location.hash);
 		};
+		
+		$('.submit a').click(function(e) {
+			var button = $(this);
+			button.submitButton('waiting');
+			setTimeout(function() {
+				goToArticle('#thanks', true, function() {
+					button.submitButton('default');
+				});
+			}, 1000);
+			return false;
+		});
 	});
 })(jQuery);
-

@@ -254,7 +254,7 @@ input[type=text], input[type=url], textarea {
 		font-family: Georgia, 'Times New Roman', Times, serif;
 		font-size: 21px;
 		font-style: italic;
-		line-height: 26px;
+		line-height: 28px;
 		color: #6d7581;
 		text-align: center;
 	}
@@ -275,44 +275,84 @@ input[type=text], input[type=url], textarea {
 		#rate colgroup.values col {
 			width: 80px;
 		}
-		#rate table thead th {
-			padding-bottom: .25em;
-			color: #6d7581;
-			font-size: 12px;
-			text-align: center;
-			text-transform: uppercase;
+		#rate table thead {
 		}
+			#rate table thead th {
+				padding-bottom: .25em;
+				color: #6d7581;
+				font-size: 12px;
+				text-align: center;
+				text-transform: uppercase;
+			}
 		#rate table tbody {
 			font-size: 21px;
 		}
-		#rate table tbody :-moz-any(td, th) {
-			padding: .25em 0;
-			border-bottom: 1px dotted #e0e0e0;
-			vertical-align: middle;
-		}
-		#rate table tbody tr:first-child :-moz-any(td, th) {
-			border-top: 1px dotted #e0e0e0;
-		}
-		#rate table tbody td {
-			text-align: center;
-		}
-		#rate table tbody td span {
-			position: relative;
-			display: block;
-			width: 40px;
-			height: 40px;
-			margin: 0 auto;
-			background: rgba(255,0,0,.125);
-			overflow: hidden;
-		}
-		#rate table tbody td input {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			border: 0 !important;
-			padding: 0 !important;
-			opacity: .25;
-			cursor: pointer;
-		}
+			#rate table tbody .help {
+				display: inline-block;
+				vertical-align: -3px;
+				width: 20px;
+				height: 20px;
+				background: url(help.png) no-repeat 0 0;
+				cursor: help;
+			}
+			#rate table tbody .help:hover {
+				background-position: -40px 0;
+			}
+			#rate table tbody tr:nth-child(2n) {
+				background: #F9FCFF;
+			}
+			#rate table tbody :-moz-any(td, th) {
+				padding-top: .375em;
+				padding-bottom: .375em;
+				border-bottom: 1px dotted #BFD0D8;
+				vertical-align: middle;
+			}
+			#rate table tbody tr:first-child :-moz-any(td, th) {
+				border-top: 1px dotted #BFD0D8;
+			}
+			#rate table tbody th {
+				padding-right: 80px;
+			}
+			#rate table tbody td {
+				text-align: center;
+			}
+			#rate table tbody td span {
+				position: relative;
+				display: block;
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+				background-image: url(ratings.png);
+				background-repeat: no-repeat 0 0;
+				overflow: hidden;
+			}
+			#rate table tbody td input {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				border: 0 !important;
+				padding: 0 !important;
+				opacity: 0;
+				cursor: pointer;
+			}
+		
+			#rate table .a1 { background-position: 0px 0; }
+			#rate table .a2 { background-position: -50px 0; }
+			#rate table .a3 { background-position: -100px 0; }
+			#rate table .a4 { background-position: -150px 0; }
+			#rate table .a5 { background-position: -200px 0; }
+		
+			#rate table .a1:hover { background-position: 0px -50px; }
+			#rate table .a2:hover { background-position: -50px -50px; }
+			#rate table .a3:hover { background-position: -100px -50px; }
+			#rate table .a4:hover { background-position: -150px -50px; }
+			#rate table .a5:hover { background-position: -200px -50px; }
+		
+			#rate table .a1.checked { background-position: 0px -100px; }
+			#rate table .a2.checked { background-position: -50px -100px; }
+			#rate table .a3.checked { background-position: -100px -100px; }
+			#rate table .a4.checked { background-position: -150px -100px; }
+			#rate table .a5.checked { background-position: -200px -100px; }
+		

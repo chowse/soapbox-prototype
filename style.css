@@ -70,13 +70,14 @@ article header {
 		font-size: 45px;
 	}
 	article header h2 {
-		color: #5f7087;
+		margin-top: .25em;
 		font-size: 24px;
+		color: #5f7087;
 	}
 	article header nav {
 		position: absolute;
 		right: 0;
-		top: 1.5em;
+		top: 1em;
 	}
 		article header nav a {
 			position: absolute;
@@ -389,7 +390,7 @@ input[type=text], input[type=url], textarea {
 #thanks {	
 }
 	#thanks h1 {
-		color: #345634;
+		/* color: #345634; */
 	}
 	#thanks div {
 		margin-bottom: 2em;
@@ -413,7 +414,6 @@ input[type=text], input[type=url], textarea {
 				font-family: MetaBold, "Trebuchet MS", sans-serif;
 				font-weight: bold;
 				font-style: normal;
-				color: inherit;
 				text-transform: uppercase;
 			}
 			#thanks :-moz-any(ul, p) a:hover {

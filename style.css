@@ -8,6 +8,13 @@
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: 'MetaBold';
+	src: url('MetaWebPro-Bold.eot');
+	src: url('MetaWebPro-Bold.woff') format('woff');
+	font-weight: bold;
+}
+
 
 html {
 	font-family: Helvetica, Arial, sans-serif;
@@ -356,3 +363,76 @@ input[type=text], input[type=url], textarea {
 			#rate table .a4.checked { background-position: -150px -100px; }
 			#rate table .a5.checked { background-position: -200px -100px; }
 		
+#thanks {	
+}
+	#thanks h1 {
+		color: #345634;
+	}
+	#thanks div {
+		margin-bottom: 2em;
+	}
+		#thanks h3 {
+			margin-bottom: .25em;
+			margin-bottom: .375em;
+			font-family: Georgia, "Times New Roman", Times, serif;
+			font-size: 18px;
+			font-style: italic;
+			color: #6d7581;
+		}
+		#thanks :-moz-any(ul, p) {
+			font-family: Georgia, "Times New Roman", Times, serif;
+			font-size: 24px;
+			font-style: italic;
+			color: #284263;
+			letter-spacing: -0.02em;
+		}
+			#thanks :-moz-any(ul, p) a {
+				font-family: MetaBold, "Trebuchet MS", sans-serif;
+				font-weight: bold;
+				font-style: normal;
+				color: inherit;
+				text-transform: uppercase;
+			}
+			#thanks :-moz-any(ul, p) a:hover {
+				color: #5084C8;
+			}
+		#thanks ul {
+			margin-top: .375em;
+		}
+		#thanks li {
+			display: inline;
+		}
+			#thanks li a {
+				text-decoration: none;
+			}
+				#thanks li a:hover span {
+					text-decoration: underline;
+				}
+			#thanks li a:before {
+				content: " ";
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				margin-right: .25em;
+				background: url(sharing.png) no-repeat 0 0;
+				text-decoration: none;
+			}
+			#thanks li a:after {
+				content: "\2215";
+				color: #b0b5bc;
+				color: #e0e0e0;
+				margin: 0 .5em;
+				text-decoration: none;
+			}
+			#thanks li:last-child a:after {
+				display: none;
+			}
+			
+			#thanks li #twitter:before { background-position: 0 0; width: 29px; }
+			#thanks li #facebook:before { background-position: -40px 0; }
+			#thanks li #planet:before { background-position: -80px 0; }
+
+			#thanks li #twitter:hover:before { background-position: 0 -40px; }
+			#thanks li #facebook:hover:before { background-position: -40px -40px; }
+			#thanks li #planet:hover:before { background-position: -80px -40px; }
+

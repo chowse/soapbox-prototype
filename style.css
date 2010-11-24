@@ -363,6 +363,29 @@ input[type=text], input[type=url], textarea {
 			#rate table .a4.checked { background-position: -150px -100px; }
 			#rate table .a5.checked { background-position: -200px -100px; }
 		
+		
+#broken {
+}
+	#broken-url {
+		width: 55ex;
+	}
+	#broken-desc {
+		width: 60ex;
+		height: 4em;
+	}
+	#broken-desc:-moz-placeholder {
+		color: #aeafaf;
+	}
+
+	
+#idea {
+}
+	#idea-desc {
+		width: 60ex;
+		height: 6em;
+	}
+
+
 #thanks {	
 }
 	#thanks h1 {

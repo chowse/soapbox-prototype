@@ -103,15 +103,20 @@
 		};
 		
 		$('#rate table').styledRadio('input', 'span');
-		
-		$('.submit a').click(function(e) {
-			var button = $(this);
+
+		$('article form').submit(function(e) {
+			var button = $(this).find('.submit a');
 			button.submitButton('waiting');
 			setTimeout(function() {
 				goToArticle('#thanks', true, function() {
 					button.submitButton('default');
 				});
 			}, 1000);
+			return false;
+		});
+		
+		$('.submit a').click(function(e) {
+			$(this).closest('form').submit();
 			return false;
 		});
 	});

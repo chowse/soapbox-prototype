@@ -107,6 +107,7 @@ article .content {
 	margin: 0 auto;
 	background: url(divider-top.png) no-repeat center top;
 	padding-top: 46px;
+	padding-bottom: 70px;
 }
 	article .content form {
 		width: 700px;
@@ -216,6 +217,94 @@ input[type=text], input[type=url], textarea {
 		background: #ffffdd;
 	}
 	
+	
+	
+footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 10px 0;
+	padding-top: 15px;
+	border-top: 1px solid #f0f0f0;
+	font-size: 11px;
+	background: #f8f8f8;
+	color: #909090;
+}
+footer:hover {
+	color: #606060;
+}
+	footer a {
+		font-weight: bold;
+		color: inherit;
+	}
+	footer a:hover {
+		text-decoration: underline;
+	}
+	footer #copyright {
+		position: relative;
+		width: 700px;
+		padding-left: 60px;
+		margin: 0 auto;
+		background: url(footer-logo.png) no-repeat 0 0;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		opacity: .5;
+		opacity: 1;
+		-moz-transition: opacity .25s;
+	}
+	footer #copyright:hover {
+		opacity: 1;
+	}
+		footer #copyright li {
+			display: inline;
+		}
+		footer #copyright p {
+			line-height: 1.25;
+		}
+		footer #copyright p:first-child {
+			margin-bottom: .25em;
+		}
+	footer form {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+		footer form .selectbox {
+			position: relative;
+		}
+			footer form .selectbox span {
+				font-weight: bold;
+			}
+			footer form .selectbox:hover span {
+				text-decoration: underline;
+			}
+			footer form .selectbox span:after {
+				content: "\25be";
+				padding-left: .25em;
+			}
+			footer form .selectbox select {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				opacity: 0;
+				cursor: pointer;
+			}
+		footer form select {
+			border: none;
+			padding: 0;
+			font: inherit;
+			font-weight: bold;
+			background: transparent;
+			color: inherit;
+			-moz-appearance: none;
+		}
+		footer form option {
+			color: -moz-comboboxtext;
+			font: -moz-list;
+		}
 	
 	
 #intro {

@@ -34,6 +34,7 @@ article {
 	right: 0;
 	width: 700px;
 	margin: 0 auto;
+	padding-bottom: 90px;
 }
 	a {
 		color: #5084c8;
@@ -117,7 +118,6 @@ article header {
 
 article .content {
 	margin-top: 3em;
-	padding-bottom: 70px;
 }
 	article .content form {
 	}
@@ -133,7 +133,7 @@ article .content {
 			font-weight: bold;
 		}
 	article .content .submit {
-		margin-top: 2em;
+		margin-top: 3em;
 	}
 		article .content .submit a {
 			position: relative;
@@ -198,7 +198,7 @@ input[type=text], input[type=url], textarea {
 	font-size: 21px;
 	padding: .25em .25em;
 	border-radius: .25em;
-	box-shadow: 0 1px 2px rgba(0,0,0, .125) inset;
+	box-shadow: 0 1px 2px rgba(192, 208, 216, 0.5) inset;
 }
 
 textarea {
@@ -206,7 +206,7 @@ textarea {
 }
 
 input[type=text], input[type=url], textarea {
-	background: #f9fcff;
+	background: #FCFDFF;
 	box-shadow: 0 1px 2px rgba(0,0,0, .125) inset;
 }
 

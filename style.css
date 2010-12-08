@@ -19,10 +19,12 @@
 html {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	background: #fff;
+	background: #fff url(page-bg.png) repeat-x 0 -100px;
+	color: #282b31;
 }
 	body {
-		color: #282b31;
+		background: none;
+		color: inherit;
 	}
 
 
@@ -30,6 +32,8 @@ article {
 	display: block;
 	left: 0;
 	right: 0;
+	width: 700px;
+	margin: 0 auto;
 }
 	a {
 		color: #5084c8;
@@ -54,9 +58,7 @@ html.transitioning article {
 
 article header {
 	position: relative;
-	width: 700px;
-	margin: 0 auto;
-	padding: 2em 0;
+	padding-top: 2em;
 }
 	article header h1,
 	article header h2 {
@@ -74,6 +76,17 @@ article header {
 		font-size: 24px;
 		color: #5f7087;
 	}
+	article header p {
+		margin-top: .5em;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		font-size: 21px;
+		font-style: italic;
+		line-height: 26px;
+		color: #6d7581;
+	}
+		article header p span {
+			display: block;
+		}
 	article header nav {
 		position: absolute;
 		right: 0;
@@ -103,26 +116,11 @@ article header {
 			}
 
 article .content {
-	width: 940px;
-	margin: 0 auto;
-	background: url(divider-top.png) no-repeat center top;
-	padding-top: 46px;
+	margin-top: 3em;
 	padding-bottom: 70px;
 }
 	article .content form {
-		width: 700px;
-		margin: 0 auto;
 	}
-	article .content .intro {
-		font-family: Georgia, 'Times New Roman', Times, serif;
-		font-size: 21px;
-		font-style: italic;
-		line-height: 26px;
-		color: #6d7581;
-	}
-		article .content .intro span {
-			display: block;
-		}
 	article .content .fields {
 		position: relative;
 	}
@@ -312,17 +310,17 @@ footer:hover {
 	
 	
 #intro {
-	background: url(page-bg.png) repeat-x 0 -100px;
+	text-align: center;
 }
 	#intro header {
-		text-align: center;
-		padding: 35px 0;
 	}
 	#intro .content {
 		position: relative;
-		padding: 0;
+		padding: 0 70px;
+		margin: 3em -70px;
 		background: url(divider-top.png) no-repeat center top,
-		            url(divider-bottom.png) no-repeat center bottom;
+		            url(divider-bottom.png) no-repeat center bottom,
+		            -moz-linear-gradient(#fff, #fff);
 	}
 		#intro .content li {
 			display: inline;
@@ -335,7 +333,7 @@ footer:hover {
 				position: relative;
 				display: inline-block;
 				width: 33.3%;
-				padding: 2em 0;
+				padding: 2.5em 0;
 				color: #6D7581;
 				text-decoration: none;
 				-moz-transition: color .25s;
@@ -370,15 +368,11 @@ footer:hover {
 		margin: 0 auto;
 		margin-top: 2em;
 		font-family: Georgia, 'Times New Roman', Times, serif;
-		font-size: 21px;
+		font-size: 18px;
 		font-style: italic;
-		line-height: 28px;
+		line-height: 24px;
 		color: #6d7581;
-		text-align: center;
 	}
-		#intro aside span {
-			display: block;
-		}
 		#intro aside span {
 			display: block;
 		}
@@ -388,7 +382,6 @@ footer:hover {
 	
 }
 	#rate table {
-		margin-top: 2em;
 	}
 		#rate colgroup.values col {
 			width: 80px;

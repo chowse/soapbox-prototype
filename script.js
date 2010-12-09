@@ -39,23 +39,6 @@
 			
 			return this;
 		},
-		styledRadio: function(radioSelector, parentSelector) {
-			var self = this.get();
-			updateChecks(this);
-			return this.delegate(radioSelector, 'change', onChange)
-			           .delegate(radioSelector, 'focus', onFocus)
-			           .delegate(radioSelector, 'blur', onBlur);
-			
-			function onFocus(e) { $(this).closest(parentSelector).addClass('focused'); }
-			function onBlur(e) { $(this).closest(parentSelector).removeClass('focused'); }
-			function onChange(e) { updateChecks($(self)); }
-			
-			function updateChecks(self) {
-				self.find(radioSelector).each(function() {
-					$(this).closest(parentSelector).toggleClass('checked', this.checked);
-				});
-			}
-		},
 		submitButton: function(state) {
 			var textElem = this.find('span');
 			var oldHTML = textElem.html();
@@ -102,8 +85,6 @@
 			goToArticle(document.location.hash);
 		};
 		
-		$('#rate table').styledRadio('input', 'span');
-
 		$('article form').submit(function(e) {
 			var button = $(this).find('.submit a');
 			button.submitButton('waiting');

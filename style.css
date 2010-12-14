@@ -19,7 +19,8 @@
 html {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	background: #fff url(page-bg.png) repeat-x 0 -100px;
+	font-weight: 100;
+	background: #fff url(page-bg.png) repeat-x 0 0;
 	color: #282b31;
 }
 	body {
@@ -29,13 +30,27 @@ html {
 
 
 article {
+	position: relative;
 	display: block;
 	left: 0;
 	right: 0;
 	width: 700px;
-	margin: 0 auto;
-	padding-bottom: 90px;
+	min-height: 420px;
+	margin: 20px auto;
+	margin-bottom: 65px;
+	-moz-box-sizing: border-box;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
+	article:before {
+		position: absolute;
+		left: -5px;
+		top: -5px;
+		right: -0;
+		bottom: 0;
+		-moz-transform: rotate(-.5deg);
+		z-index: -1;
+	}
 	a {
 		color: #5084c8;
 		text-decoration: none;
@@ -59,18 +74,21 @@ html.transitioning article {
 
 article header {
 	position: relative;
-	padding-top: 2em;
+	padding: 20px 35px;
+	background: -moz-linear-gradient(#FFFFFF, #F7F8F9);
+	background: -moz-radial-gradient(center 0, #FFFFFF, #F7F8F9);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.01);
+/*	border-bottom: 1px solid #f0f1f2;
+*/
 }
 	article header h1,
 	article header h2 {
-		font-family: MetaBlack, "Trebuchet MS", sans-serif;
 		font-weight: bold;
 		letter-spacing: -0.02em;
-		text-transform: uppercase;
 	}
 	article header h1 {
 		color: #284263;
-		font-size: 45px;
+		font-size: 36px;
 	}
 	article header h2 {
 		margin-top: .25em;
@@ -79,25 +97,25 @@ article header {
 	}
 	article header p {
 		margin-top: .5em;
+		line-height: 1.2;
+/*
 		font-family: Georgia, 'Times New Roman', Times, serif;
-		font-size: 21px;
 		font-style: italic;
-		line-height: 26px;
+*/
+		font-size: 18px;
 		color: #6d7581;
 	}
 		article header p span {
 			display: block;
 		}
 	article header nav {
-		position: absolute;
-		right: 0;
-		top: 1em;
+		position: inline;
 	}
 		article header nav a {
 			position: absolute;
 			background: url(back.png) no-repeat 0 0;
-			right: 0;
-			top: 0;
+			right: 35px;
+			top: 20px;
 			width: 34px;
 			height: 34px;
 			text-indent: -1000em;
@@ -117,15 +135,20 @@ article header {
 			}
 
 article .content {
-	margin-top: 3em;
+	padding: 35px 35px;
+	position: relative;
+	z-index: 1;
 }
 	article .content form {
 	}
 	article .content .fields {
 		position: relative;
 	}
+		article .content .fields > div:first-child {
+			margin-top: 0;
+		}
 		article .content .fields > div {
-			margin-top: 2em;
+			margin-top: 35px;
 		}
 		article .content .fields label {
 			display: block;
@@ -133,7 +156,7 @@ article .content {
 			font-weight: bold;
 		}
 	article .content .submit {
-		margin-top: 3em;
+		margin-top: 40px;
 	}
 		article .content .submit a {
 			position: relative;
@@ -187,7 +210,14 @@ article .content {
 		html article .content .submit a { display: none;  }
 		html.js article .content .submit a { display: inline-block; }
 
-
+article .fade {
+	position: absolute;
+	left: -4px;
+	right: -4px;
+	top: 200px;
+	bottom: -6px;
+	background: -moz-linear-gradient(rgba(255,255,255,0), #fff);
+}
 
 
 input[type=text], input[type=url], textarea {
@@ -198,16 +228,20 @@ input[type=text], input[type=url], textarea {
 	font-size: 21px;
 	padding: .25em .25em;
 	border-radius: .25em;
-	box-shadow: 0 1px 2px rgba(192, 208, 216, 0.5) inset;
+	-moz-box-sizing: border-box;
 }
 
 textarea {
 	line-height: 1.2;
+	width: 100%;
 }
 
 input[type=text], input[type=url], textarea {
 	background: #FCFDFF;
-	box-shadow: 0 1px 2px rgba(0,0,0, .125) inset;
+	background: #fff;
+	border: 1px solid rgba(0,0,0,.3);
+	border: 0;
+	box-shadow: 0 0 2px rgba(0,0,0, .4) inset;
 }
 
 .privacy {
@@ -232,6 +266,7 @@ footer {
 	font-size: 11px;
 	background: #f8f8f8;
 	color: #909090;
+	z-index: 2;
 }
 footer:hover {
 	color: #606060;
@@ -310,18 +345,12 @@ footer:hover {
 	
 	
 #intro {
-	text-align: center;
 }
 	#intro header {
 	}
 	#intro .content {
 		position: relative;
-		padding: 0 70px;
-		margin: 3em -70px;
-		font-weight: bold;
-		background: url(divider-top.png) no-repeat center top,
-		            url(divider-bottom.png) no-repeat center bottom,
-		            -moz-linear-gradient(#fff, #fff);
+		font-weight: normal;
 		text-align: center;
 	}
 		#intro .content li {
@@ -332,13 +361,12 @@ footer:hover {
 				position: relative;
 				display: inline-block;
 				width: 33.3%;
-				padding: 2.5em 0;
-				color: #6D7581;
 				text-decoration: none;
 				-moz-transition: color .25s;
 			}
 			#intro .content li a:hover {
 				color: #5084C8;
+				text-decoration: underline;
 			}
 				#intro .content li a span {
 					position: relative;
@@ -363,17 +391,18 @@ footer:hover {
 					opacity: 1;
 				}
 	#intro aside {
-		width: 700px;
-		margin: 0 auto;
-		margin-top: 2em;
-		font-family: Georgia, 'Times New Roman', Times, serif;
-		font-size: 18px;
-		font-style: italic;
+		position: relative;
+		padding: 20px 35px 35px;
+		font-size: 14px;
 		line-height: 24px;
 		color: #6d7581;
+		text-align: center;
+		z-index: 1;
 	}
 		#intro aside span {
-			display: block;
+			padding: 2px;
+			color: #5C4B00;
+			background: #FFFFDD;
 		}
 
 
@@ -381,6 +410,7 @@ footer:hover {
 	
 }
 	#rate table {
+		width: 100%;
 	}
 		#rate colgroup.values col {
 			width: 80px;
@@ -390,21 +420,25 @@ footer:hover {
 			#rate table thead th {
 				padding-bottom: .25em;
 				color: #6d7581;
-				font-size: 12px;
+				font-size: 11px;
 				text-align: center;
 				text-transform: uppercase;
 			}
 		#rate table tbody {
-			font-size: 21px;
+			font-size: 18px;
 		}
 			#rate table tbody .help {
-				display: inline-block;
-				vertical-align: -3px;
-				width: 20px;
-				height: 20px;
-				background: url(help.png) no-repeat 0 0;
 				cursor: help;
 			}
+				#rate table tbody .help:after {
+					content: '';
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+					margin-left: 8px;
+					vertical-align: -3px;
+					background: url(help.png) no-repeat 0 0;
+				}
 			#rate table tbody .help:hover {
 				background-position: -40px 0;
 			}
@@ -412,8 +446,7 @@ footer:hover {
 				background: #F9FCFF;
 			}
 			#rate table tbody :-moz-any(td, th) {
-				padding-top: .375em;
-				padding-bottom: .375em;
+				padding: 8px 0;
 				border-bottom: 1px dotted #BFD0D8;
 				vertical-align: middle;
 			}
@@ -421,7 +454,6 @@ footer:hover {
 				border-top: 1px dotted #BFD0D8;
 			}
 			#rate table tbody th {
-				padding-right: 80px;
 			}
 			#rate table tbody td {
 				text-align: center;
@@ -472,10 +504,9 @@ footer:hover {
 #broken {
 }
 	#broken-url {
-		width: 55ex;
+		width: 80%;
 	}
 	#broken-desc {
-		width: 60ex;
 		height: 4em;
 	}
 	#broken-desc:-moz-placeholder {
@@ -486,7 +517,6 @@ footer:hover {
 #idea {
 }
 	#idea-desc {
-		width: 60ex;
 		height: 6em;
 	}
 
@@ -497,10 +527,9 @@ footer:hover {
 		/* color: #345634; */
 	}
 	#thanks .content {
-		margin-top: 3em;
 	}
 		#thanks .content div {
-			margin-bottom: 3em;
+			margin-bottom: 40px;
 		}
 		#thanks h3 {
 			margin-bottom: .25em;

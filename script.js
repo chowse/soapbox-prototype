@@ -51,7 +51,7 @@
 			
 			return this;
 		},
-		clickReveal: function(bindTo) {
+		clickEnable: function(bindTo) {
 			return this.each(function() {
 				onClick.call(this);
 				$(this).click(onClick);
@@ -112,7 +112,7 @@
 			return false;
 		});
 		
-		$('#happy-with-url').clickReveal('#happy-url');
-		$('#sad-with-url').clickReveal('#sad-url');
+		$('#happy-with-url').clickEnable('#happy-url');
+		$('#sad-with-url').clickEnable('#sad-url');
 	});
 })(jQuery);

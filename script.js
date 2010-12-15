@@ -50,6 +50,17 @@
 			if (state == 'waiting') this.attr('data-text', oldHTML);
 			
 			return this;
+		},
+		clickReveal: function(bindTo) {
+			return this.each(function() {
+				onClick.call(this);
+				$(this).click(onClick);
+			});
+			
+			function onClick() {
+				var checked = this.checked;
+				$(bindTo)[0].disabled = !checked;
+			}
 		}
 	});
 
@@ -100,5 +111,8 @@
 			$(this).closest('form').submit();
 			return false;
 		});
+		
+		$('#happy-with-url').clickReveal('#happy-url');
+		$('#sad-with-url').clickReveal('#sad-url');
 	});
 })(jQuery);

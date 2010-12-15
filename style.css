@@ -225,10 +225,28 @@ input[type=text], input[type=url], textarea {
 	color: #606060;
 	color: #5e5f60;
 	font-family: inherit;
+	font-weight: inherit;
 	font-size: 21px;
 	padding: .25em .25em;
 	border-radius: .25em;
 	-moz-box-sizing: border-box;
+}
+
+input[type=text]:-moz-placeholder,
+input[type=url]:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #aeafaf;
+}
+
+input[type=text]:disabled,
+input[type=url]:disabled,
+textarea:disabled {
+	color: #aeafaf;
+	opacity: .5;
+}
+
+input[type=text], input[type=url] {
+	width: 80%;
 }
 
 textarea {
@@ -509,9 +527,6 @@ footer:hover {
 	#broken-desc {
 		height: 4em;
 	}
-	#broken-desc:-moz-placeholder {
-		color: #aeafaf;
-	}
 
 	
 #idea {
@@ -594,3 +609,11 @@ footer:hover {
 			#thanks .content li #facebook:hover:before { background-position: -40px -40px; }
 			#thanks .content li #planet:hover:before { background-position: -80px -40px; }
 
+
+#sad {
+}
+	#sad-url {
+		display: inline;
+	}
+	html.js #sad-url {
+	}

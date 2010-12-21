@@ -26,15 +26,6 @@ article {
 	background: #fff;
 	box-shadow: 0 2px 4px rgba(0,0,0,.2);
 }
-	article:before {
-		position: absolute;
-		left: -5px;
-		top: -5px;
-		right: -0;
-		bottom: 0;
-		-moz-transform: rotate(-.5deg);
-		z-index: -1;
-	}
 	a {
 		color: #5084c8;
 		text-decoration: none;
@@ -51,15 +42,12 @@ html.transitioning {
 
 html.transitioning article {
 	position: absolute;
-	-moz-transition: left .6s ease-in;
-	-webkit-transition: left .6s ease-in;
+	-moz-transition: left .6s ease-in, right .6s ease-in-out;
 }
 
 html.transitioning article.entering {
-	-moz-transition-delay: .6s;
-	-webkit-transition-delay: .6s;
-	-moz-transition-timing-function: ease-out;
-	-webkit-transition-timing-function: ease-out;
+	-moz-transition-delay: .3s;
+	-moz-transition-timing-function: ease-in-out;
 }
 
 

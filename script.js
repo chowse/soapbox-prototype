@@ -14,16 +14,16 @@
 				width = $(window).width();
 			
 			if (fromElem.nodeIndex() < toElem.nodeIndex()) {
-				var fromEnd = -2*width;
+				var fromEnd = -width;
 				var toStart = width;
 			} else {
 				var fromEnd = width;
-				var toStart = -2*width;
+				var toStart = -width;
 			}
 
-			fromElem.css({ left: 0 });
+			fromElem.css({ left: 0, right: 0 });
 			toElem.addClass('entering')
-			      .css({ left: toStart, display: 'block' });
+			      .css({ left: toStart, right: -toStart, display: 'block' });
 			$('html').addClass('transitioning');
 			
 			toElem.one('transitionend', function(e) {
@@ -34,8 +34,8 @@
 			});
 			
 			setTimeout(function() {
-				fromElem.css({ left: fromEnd });
-				toElem.css({ left: 0 });
+				fromElem.css({ left: fromEnd, right: -fromEnd });
+				toElem.css({ left: 0, right: 0 });
 			}, 100);
 			
 			return this;

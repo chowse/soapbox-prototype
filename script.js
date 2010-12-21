@@ -10,31 +10,32 @@
 		
 		switchTo: function(what, callback) {
 			var fromElem = this,
-			    toElem = $(what);
+			    toElem = $(what),
+				width = $(window).width();
 			
 			if (fromElem.nodeIndex() < toElem.nodeIndex()) {
-				var height = fromElem.height();
-				var fromEnd = 0 - height;
-				var toStart = height;
+				var fromEnd = -2*width;
+				var toStart = width;
 			} else {
-				var height = toElem.height();
-				var fromEnd = height;
-				var toStart = 0 - height;
+				var fromEnd = width;
+				var toStart = -2*width;
 			}
-			
-			fromElem.css({ top: 0, opacity: 1 });
-			toElem.css({ top: toStart, opacity: 0, display: 'block' });
+
+			fromElem.css({ left: 0 });
+			toElem.addClass('entering')
+			      .css({ left: toStart, display: 'block' });
 			$('html').addClass('transitioning');
 			
 			toElem.one('transitionend', function(e) {
 				fromElem.css({ display: 'none' });
+				toElem.removeClass('entering');
 				$('html').removeClass('transitioning');
 				if (callback) callback();
 			});
 			
 			setTimeout(function() {
-				fromElem.css({ top: fromEnd, opacity: 0 });
-				toElem.css({ top: 0, opacity: 1 });
+				fromElem.css({ left: fromEnd });
+				toElem.css({ left: 0 });
 			}, 100);
 			
 			return this;

@@ -391,8 +391,13 @@ footer:hover {
 					margin-bottom: 1em;
 					background: url(type.png) no-repeat 0 0;
 				}
+				#intro #feedback-types-beta span {
+					background-image: url(type-beta.png);
+				}
 				#intro #intro-rate span { background-position: 0 0; }
+				#intro #intro-happy span { background-position: 0 0; }
 				#intro #intro-broken span { background-position: -100px 0; }
+				#intro #intro-sad span { background-position: -100px 0; }
 				#intro #intro-idea span { background-position: -200px 0; }
 				#intro .content li a strong {
 					position: absolute;
@@ -407,8 +412,13 @@ footer:hover {
 				#intro .content li a:hover strong {
 					opacity: 1;
 				}
+				#intro #feedback-types-beta strong {
+					background-image: url(type-beta.png);
+				}
 				#intro #intro-rate strong { background-position: 0 -100px; }
+				#intro #intro-happy strong { background-position: 0 -100px; }
 				#intro #intro-broken strong { background-position: -100px -100px; }
+				#intro #intro-sad strong { background-position: -100px -100px; }
 				#intro #intro-idea strong { background-position: -200px -100px; }
 	#intro aside {
 		position: relative;

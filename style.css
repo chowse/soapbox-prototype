@@ -57,6 +57,7 @@ article header {
 	padding: 20px 35px;
 	background: -moz-linear-gradient(#FFFFFF, #F7F8F9);
 	background: -moz-radial-gradient(center 0, #fff, #ebedf0);
+	color: #6d7581;
 	border-radius: 10px 10px 0 0;
 	box-shadow: inset 0 -1px 0 rgba(0,0,0,.00);
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
@@ -85,7 +86,6 @@ article header {
 		font-style: italic;
 */
 		font-size: 18px;
-		color: #6d7581;
 	}
 		article header p span {
 			display: block;
@@ -366,6 +366,9 @@ footer:hover {
 				text-decoration: none;
 				-moz-transition: color .25s;
 			}
+			#intro #feedback-types-beta #intro-happy { color: #568E62; }
+			#intro #feedback-types-beta #intro-sad { color: #977367; }
+			#intro #feedback-types-beta #intro-idea { color: #947E2E; }
 			#intro .content li a:hover {
 				color: #5084C8;
 				text-decoration: underline;
@@ -653,9 +656,25 @@ footer:hover {
 			bottom: 0;
 		}
 
+#happy {
+}
+	#happy header {
+		background: -moz-radial-gradient(center 0, #fff, #e9f1eb);
+		color: #728676;
+	}
+		#happy header h1 {
+			color: #35563c;
+		}
 
 #sad {
 }
+	#sad header {
+		background: -moz-radial-gradient(center 0, #fff, #f1ecea);
+		color: #80716c;
+	}
+		#sad header h1 {
+			color: #533f38;
+		}
 	#sad-url {
 		display: inline;
 	}

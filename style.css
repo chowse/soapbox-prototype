@@ -35,6 +35,7 @@ article {
 	}
 	
 html.js article { display: none; }
+html.js article.visible { display: block; }
 
 html.transitioning {
 	overflow: hidden;
@@ -694,3 +695,47 @@ footer:hover {
 	}
 	html.js #sad-url {
 	}
+
+
+#download {
+	font-weight: normal;
+}
+	#download-logo {
+		margin-bottom: 24px;
+		text-align: center;
+	}
+	#download-link {
+	}
+		#download-link:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 35px;
+			width: 279px;
+			height: 323px;
+			margin: 0 auto;
+		}
+	#download p {
+		margin: 0 35px;
+		font-size: 24px;
+		line-height: 32px;
+		text-align: center;
+	}
+	#download .alt {
+		display: none;
+		margin-top: 24px;
+		font-size: 14px;
+		line-height: 1;
+		color: #999;
+	}
+	#download .warning {
+		margin-top: 24px;
+		font-size: 11px;
+		line-height: 1;
+		color: #999;
+	}
+		#download .warning a {
+			color: #a8c2e4;
+		}
+	

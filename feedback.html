@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 
 <script type="text/javascript">
-	document.documentElement.className += ' js';
+	(function(d) {
+		d.className = d.className.replace(/\bno-js\b/, 'js');
+	})(document.documentElement);
 </script>
 
 <head>
@@ -269,7 +271,7 @@
 </footer>
 
 
-<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="jquery-1.5.1.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 
 </body>

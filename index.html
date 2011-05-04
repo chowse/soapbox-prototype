@@ -23,11 +23,11 @@
 	</header>
 	
 	<section class="content"><form>
-		<ul id="feedback-types">
+		<ul id="feedback-types-beta">
 			<!--
-			--><li><a id="intro-rate" href="#rate"><span><strong></strong></span> Rate Your Experience</a></li><!--
-			--><li><a id="intro-broken" href="#broken"><span><strong></strong></span> Report a Broken Website</span></a></li><!--
-			--><li><a id="intro-idea" href="#idea"><span><strong></strong></span> Share an Idea</span></a></li>	<!--
+			--><li><a id="intro-happy" href="#happy"><span><strong></strong></span> Firefox Made Me Happy</a></li><!--
+			--><li><a id="intro-sad" href="#sad"><span><strong></strong></span> Firefox Made Me Sad</span></a></li><!--
+			--><li><a id="intro-idea" href="#idea"><span><strong></strong></span> I Have an Idea for Firefox</span></a></li><!--
 			-->
 		</ul>
 	</form></section>
@@ -43,106 +43,11 @@
 </article>
 
 
-<article id="rate">
+<article id="happy">
 	<header>
-		<h1>Rate Your Experience</h1>
+		<h1>Firefox Made Me Happy</h1>
 		<p>
-			How would you rate these aspects of Firefox?
-		</p>
-		<nav>
-			<a href="#intro" title="Go Back">Go Back <strong></strong></a>
-		</nav>
-	</header>
-	
-	<section class="content"><form>
-		<table>
-			<colgroup class="labels">
-				<col />
-			</colgroup>
-
-			<colgroup class="values">
-				<col />
-				<col />
-				<col />
-				<col />
-				<col />
-			</colgroup>
-			
-			<thead>
-				<tr>
-					<th></th>
-					<th>Poor</th>
-					<th>Fair</th>
-					<th>Don't Care</th>
-					<th>Good</th>
-					<th>Excellent</th>
-				</tr>
-			</thead>
-			
-			<tbody>
-				<tr>
-					<th><span class="help" title="How long Firefox takes to start running">Start-Up Time</span></th>
-					<td><input id="q1-a1" type="radio" name="q1" value="a1" /> <label title="Poor" for="q1-a1"></label></td>
-					<td><input id="q1-a2" type="radio" name="q1" value="a2" /> <label title="Fair" for="q1-a2"></label></td>
-					<td><input id="q1-a3" type="radio" name="q1" value="a3" /> <label title="Don't Care" for="q1-a3"></label></td>
-					<td><input id="q1-a4" type="radio" name="q1" value="a4" /> <label title="Good" for="q1-a4"></label></td>
-					<td><input id="q1-a5" type="radio" name="q1" value="a5" /> <label title="Excellent" for="q1-a5"></label></td>
-				</tr>
-
-				<tr>
-					<th><span class="help" title="How long it takes for web pages to load">Page Load Time</span></th>
-					<td><input id="q2-a1" type="radio" name="q2" value="a1" /> <label title="Poor" for="q2-a1"></label></td>
-					<td><input id="q2-a2" type="radio" name="q2" value="a2" /> <label title="Fair" for="q2-a2"></label></td>
-					<td><input id="q2-a3" type="radio" name="q2" value="a3" /> <label title="Don't Care" for="q2-a3"></label></td>
-					<td><input id="q2-a4" type="radio" name="q2" value="a4" /> <label title="Good" for="q2-a4"></label></td>
-					<td><input id="q2-a5" type="radio" name="q2" value="a5" /> <label title="Excellent" for="q2-a5"></label></td>
-				</tr>
-
-				<tr>
-					<th><span class="help" title="How quickly web pages respond once they have loaded">Responsiveness</span></th>
-					<td><input id="q3-a1" type="radio" name="q3" value="a1" /> <label title="Poor" for="q3-a1"></label></td>
-					<td><input id="q3-a2" type="radio" name="q3" value="a2" /> <label title="Fair" for="q3-a2"></label></td>
-					<td><input id="q3-a3" type="radio" name="q3" value="a3" /> <label title="Don't Care" for="q3-a3"></label></td>
-					<td><input id="q3-a4" type="radio" name="q3" value="a4" /> <label title="Good" for="q3-a4"></label></td>
-					<td><input id="q3-a5" type="radio" name="q3" value="a5" /> <label title="Excellent" for="q3-a5"></label></td>
-				</tr>
-
-				<tr>
-					<th><span class="help" title="How frequently Firefox crashes or loses data">Crashiness</span></th>
-					<td><input id="q4-a1" type="radio" name="q4" value="a1" /> <label title="Poor" for="q4-a1"></label></td>
-					<td><input id="q4-a2" type="radio" name="q4" value="a2" /> <label title="Fair" for="q4-a2"></label></td>
-					<td><input id="q4-a3" type="radio" name="q4" value="a3" /> <label title="Don't Care" for="q4-a3"></label></td>
-					<td><input id="q4-a4" type="radio" name="q4" value="a4" /> <label title="Good" for="q4-a4"></label></td>
-					<td><input id="q4-a5" type="radio" name="q4" value="a5" /> <label title="Excellent" for="q4-a5"></label></td>
-				</tr>
-
-				<tr>
-					<th><span class="help" title="How well Firefox's built-in features serve your needs">Features</span></th>
-					<td><input id="q5-a1" type="radio" name="q5" value="a1" /> <label title="Poor" for="q5-a1"></label></td>
-					<td><input id="q5-a2" type="radio" name="q5" value="a2" /> <label title="Fair" for="q5-a2"></label></td>
-					<td><input id="q5-a3" type="radio" name="q5" value="a3" /> <label title="Don't Care" for="q5-a3"></label></td>
-					<td><input id="q5-a4" type="radio" name="q5" value="a4" /> <label title="Good" for="q5-a4"></label></td>
-					<td><input id="q5-a5" type="radio" name="q5" value="a5" /> <label title="Excellent" for="q5-a5"></label></td>
-				</tr>
-			</tbody>
-		</table>
-
-		<div class="submit">
-			<a href="#" data-waittext="Submitting Feedback"><span>Submit Feedback</span></a><span></span>
-			<noscript><button type="submit">Submit Feedback</button></noscript>
-		</div>
-	</form></section>
-	
-	<span class="fade"></span>
-</article>
-
-
-<article id="broken">
-	<header>
-		<h1>Report a Broken Website</h1>
-		<p>
-			<span>Does a website look or behave incorrectly in Firefox?</span>
-			<span>Provide us some details about the problem and we'll try to fix it.</span>
+			Super! It's great to hear that you like our pre-released browser. 
 		</p>
 		<nav>
 			<a href="#intro" title="Go Back">Go Back <strong></strong></a>
@@ -153,13 +58,19 @@
 		
 		<div class="fields">
 			<div>
-				<label for="broken-url">What is the URL of the broken site?</label>
-				<p><input id="broken-url" name="url" type="url" size="45" value="http://www.brokensite.com/broken.php"/></p>
+				<label for="happy-desc">Please describe what you liked.</label>
+				<p><textarea id="happy-desc" name="desc" cols="55" rows="3"></textarea></p>
 			</div>
-		
+
 			<div>
-				<label for="broken-desc">Describe the problem with the website.</label>
-				<p><textarea id="broken-desc" name="desc" cols="55" rows="3" placeholder="Example: Images were not loading, but the rest of the page was."></textarea></p>
+				<label for="happy-with-url">
+					<input id="happy-with-url" type="checkbox" name="with-url" />
+					Include the URL of a site that worked better.
+				</label>
+				<p><input id="happy-url" name="url" type="url" size="45" value="http://www.brokensite.com/broken.php" /></p>
+			</div>
+
+			<div>
 				<p class="privacy"><span>To protect your privacy, please ensure that no personally identifiable information is included in your feedback.</span></p>
 			</div>
 		</div>
@@ -167,6 +78,66 @@
 		<div class="submit">
 			<a href="#" data-waittext="Submitting Feedback"><span>Submit Feedback</span></a><span></span>
 			<noscript><button type="submit">Submit Feedback</button></noscript>
+		</div>
+		
+		<div class="alt-idea">
+			<em></em>
+			<span>If you have an idea to offer us instead,</span>
+			<span>
+				please use our
+				<a href="#idea"><span></span> suggestion box</a>.
+			</span>
+		</div>
+	</form></section>
+	
+	<span class="fade"></span>
+</article>
+
+
+<article id="sad">
+	<header>
+		<h1>Firefox Made Me Sad</h1>
+		<p>
+			We are sorry that you have not had a good experience with our browser. Please tell us why, so we can fix it! 
+		</p>
+		<nav>
+			<a href="#intro" title="Go Back">Go Back <strong></strong></a>
+		</nav>
+	</header>
+	
+	<section class="content"><form>
+		
+		<div class="fields">
+			<div>
+				<label for="sad-desc">Please describe your problem below.</label>
+				<p><textarea id="sad-desc" name="desc" cols="55" rows="3"></textarea></p>
+			</div>
+
+			<div>
+				<label for="sad-with-url">
+					<input id="sad-with-url" type="checkbox" name="with-url" />
+					Include the URL of the site with the problem.
+				</label>
+				<p><input id="sad-url" name="url" type="url" size="45" value="http://www.brokensite.com/broken.php" /></p>
+			</div>
+
+			<div>
+				<p class="privacy"><span>To protect your privacy, please ensure that no personally identifiable information is included in your feedback.</span></p>
+			</div>
+		</div>
+
+		<div class="submit">
+			<a href="#" data-waittext="Submitting Feedback"><span>Submit Feedback</span></a><span></span>
+			<noscript><button type="submit">Submit Feedback</button></noscript>
+		</div>
+		
+		<div class="alt-idea">
+			<em></em>
+			<span>If you have an idea to offer us instead,</span>
+			<span>
+				please use our
+				<a href="#idea"><span></span> suggestion box</a>.
+			</span>
 		</div>
 	</form></section>
 	
@@ -176,7 +147,7 @@
 
 <article id="idea">
 	<header>
-		<h1>Share an Idea</h1>
+		<h1>I Have an Idea for Firefox</h1>
 		<p>
 			Have an idea how Firefox could be better? Let us know!
 		</p>
